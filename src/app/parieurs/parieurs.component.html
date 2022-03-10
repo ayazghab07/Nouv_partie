@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="panel-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4><b>LIST OF PARIEURS</b></h4>
+        </div>
+        <div class="panel-body">
+          <br>
+          <input class="form-control" id="myInput" type="text" placeholder="Search..">
+          <br>
+  
+          
+          <div class="row">
+  
+            <div *ngIf="parieur" class="col-sm-3">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr class="info">
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <th>Ville</th>
+                    <th>Code Postal</th>
+                    <th>Sexe</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable">
+                  <tr *ngFor="let par of parieur">
+                    <td>{{par.nom}}</td>
+                    <td>{{par.prenom}}</td>
+                    <td>{{par.email}}</td>
+                    <td>{{par.ville}}</td>
+                    <td>{{par.codepostale}}</td>
+                    <td>{{par.sexe}}</td>
+                    <td><button type="button" class="btn btn-success"  (click)="Updateparieur(par.id)">Mise à jour</button></td>
+                    <td><button type="button" class="btn btn-danger" (click)="clickMethod(par.id, par.nom)">Supprimer</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
