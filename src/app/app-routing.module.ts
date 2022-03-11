@@ -4,7 +4,7 @@ import { CompteComponent } from './compte/compte.component';
 import { AjouterComponent } from './ajouter/ajouter.component';
 import { AdmineComponent } from './admine/admine.component';
 import { ParieursComponent } from './parieurs/parieurs.component';
-import { AccuielComponent } from './accueil/accuiel.component';
+
 const routes: Routes = [
   {path:'se_connecter',component:CompteComponent},
   {path:'s_inscrire',component:AjouterComponent},

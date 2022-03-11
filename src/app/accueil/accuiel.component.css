@@ -5498,7 +5498,7 @@ a.badge:hover, a.badge:focus {
 }
 
 .badge-primary {
-  color: red;
+  color: #212529;
   background-color: #ff9a44;
 }
 
@@ -11442,6 +11442,7 @@ textarea {
 }
 
 .header .header-form {
+  margin-top: 65px;
   display: block;
   background-color: #f8f9fa;
   border-radius: 0.17rem;
@@ -11457,7 +11458,7 @@ textarea {
 }
 
 .header .header-form .body {
-  padding: 25px 20px;
+  padding: -10px -20px;
 }
 
 .header .header-form .footer .btn {

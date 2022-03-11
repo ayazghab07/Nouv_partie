@@ -37,11 +37,13 @@
                           <input type="password" class="form-control" placeholder="Password*">
                       </div>
                   </div>
+                
+                <div class="head"><a [routerLink]="['/s_inscrire']">créer un compte</a></div>
+               
                   <div class="footer">
                       <button class="btn btn-primary btn-block">Se Connecter</button>
                   </div>
-                  <div class="head"><a [routerLink]="['/s_inscrire']">créer un compte</a></div>
-                  <router-outlet></router-outlet>
+                  
               </form> 
           </div>
       </div>  
@@ -250,7 +252,7 @@
               <div class="testmonial">                        
                   <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
                   <div class="media">
-                      <img class="mr-3" src="assets/imgs/avatar1.jpg" width="60" alt="Generic placeholder image">
+                      <img class="mr-3" src="./src/assets/images/avatar1.jpg" width="60" alt="Generic placeholder image">
                       <div class="media-body">
                           <h6 class="title">Emma Re</h6>
                           <p class="text-muted">Web Designer</p>
@@ -262,7 +264,7 @@
               <div class="testmonial">                        
                   <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
                   <div class="media">
-                      <img class="mr-3" src="assets/imgs/avatar2.jpg" width="60" alt="Generic placeholder image">
+                      <img class="mr-3" src="./src/assets/images/avatar2.jpg" width="60" alt="Generic placeholder image">
                       <div class="media-body">
                           <h6 class="title">John Doe</h6>
                           <p class="text-muted">Freelancer</p>
@@ -274,7 +276,7 @@
               <div class="testmonial">                        
                   <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
                   <div class="media">
-                      <img class="mr-3" src="assets/imgs/avatar3.jpg" width="60" alt="Generic placeholder image">
+                      <img class="mr-3" src="./src/assets/images/avatar3.jpg" width="60" alt="Generic placeholder image">
                       <div class="media-body">
                           <h6 class="title">Emily Roe</h6>
                           <p class="text-muted">Graphic Designer</p>
@@ -328,4 +330,5 @@
 
 <!-- Rubic js -->
 <script src="assets/js/rubic.js"></script>
+<router-outlet></router-outlet>
 </html>

@@ -24,21 +24,24 @@
               </div>  
           </div>
           <div class="col-md-5 d-none d-md-block">
-              <form class="header-form">
-                  <div class="head">Try your <span class="text-primary">Free</span> trial today.</div>
+              <form class="header-form" (ngSubmit)='onSubmit(f)' #f="ngForm">
+                  <div class="head">Pour <span class="text-primary">Admin</span></div>
                   <div class="body">
+                    <div class="form-group">
+                        <input type="text" class="form-control"  [(ngModel)]="nouvadmin.nom" placeholder="Nom" name="nom" required >
+                    </div>
                       <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Name*">
+                          <input type="text" class="form-control" [(ngModel)]="nouvadmin.prenom" placeholder="Prenom" name="prenom" required>
                       </div>
                       <div class="form-group">
-                          <input type="email" class="form-control" placeholder="Email*">
+                          <input type="email" class="form-control" [(ngModel)]="nouvadmin.email" placeholder="Email" name="email" required>
                       </div>
                       <div class="form-group">
-                          <input type="password" class="form-control" placeholder="Password*">
+                          <input type="password" class="form-control" [(ngModel)]="nouvadmin.prenom" placeholder="Mot de passe" name="password" required>
                       </div>
                   </div>
                   <div class="footer">
-                      <button class="btn btn-primary btn-block">Get Started</button>
+                      <button class="btn btn-primary btn-block">Envoyer</button>
                   </div>
               </form> 
           </div>
@@ -248,7 +251,7 @@
               <div class="testmonial">                        
                   <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
                   <div class="media">
-                      <img class="mr-3" src="assets/imgs/avatar1.jpg" width="60" alt="Generic placeholder image">
+                      <img class="mr-3" src="./src/assets/images/avatar2.jpg" width="60" alt="Generic placeholder image">
                       <div class="media-body">
                           <h6 class="title">Emma Re</h6>
                           <p class="text-muted">Web Designer</p>
@@ -260,7 +263,7 @@
               <div class="testmonial">                        
                   <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
                   <div class="media">
-                      <img class="mr-3" src="assets/imgs/avatar2.jpg" width="60" alt="Generic placeholder image">
+                      <img class="mr-3" src="./src/assets/images/avatar2.jpg" width="60" alt="Generic placeholder image">
                       <div class="media-body">
                           <h6 class="title">John Doe</h6>
                           <p class="text-muted">Freelancer</p>
@@ -272,7 +275,7 @@
               <div class="testmonial">                        
                   <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
                   <div class="media">
-                      <img class="mr-3" src="assets/imgs/avatar3.jpg" width="60" alt="Generic placeholder image">
+                      <img class="mr-3" src="./src/assets/images/avatar3.jpg" width="60" alt="Generic placeholder image">
                       <div class="media-body">
                           <h6 class="title">Emily Roe</h6>
                           <p class="text-muted">Graphic Designer</p>
@@ -308,9 +311,9 @@
                       <input type="text" class="form-control" placeholder="Subject">
                   </div>
               </div>
-              <div class="col-md-6">
+             <!--  <div class="col-md-6">
                   <textarea name="" id="" cols="" rows="7" class="form-control" required placeholder="Message"></textarea>
-              </div>
+              </div> -->
           </div>
           <input type="submit" class="btn btn-primary btn-block" value="Send Message">
       </form>

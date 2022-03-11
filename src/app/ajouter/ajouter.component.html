@@ -24,37 +24,37 @@
               </div>  
           </div>
           <div class="col-md-5 d-none d-md-block">
-              <form class="header-form">
+              <form (ngSubmit)='onSubmit(f)' #f="ngForm" class="header-form">
                   <div class="head"><span class="text-primary">Creer un compte</span> </div>
                   <div class="body">
                       <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Nom">
+                          <input type="text" class="form-control" [(ngModel)]="nouvparieur.nom"  name="nom"  placeholder="Nom" required>
                       </div>
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Prenom">
+                        <input type="text" class="form-control" [(ngModel)]="nouvparieur.prenom" placeholder="Prenom" name="prenom" required>
                     </div>
                       <div class="form-group">
-                          <input type="email" class="form-control" placeholder="Email*">
+                          <input type="email" class="form-control" [(ngModel)]="nouvparieur.email" placeholder="Email" name="email" required>
                       </div>
                       <div class="form-group">
-                        <input type="number" class="form-control" placeholder="Telephone">
+                        <input type="number" class="form-control" [(ngModel)]="nouvparieur.tel" placeholder="Telephone" name="tel" required>
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" placeholder="Code Postal">
+                        <input type="number" class="form-control" [(ngModel)]="nouvparieur.codepostale" placeholder="Code Postal"  name="code_postale" required>
                     </div>
                     <div class="form-group">
-                        <select class="form-control" name="pets" id="pet-select">
+                        <select class="form-control" name="pets" id="pet-select" [(ngModel)]="nouvparieur.ville" name="ville" required>
                             <option  class="form-control"value="">Ville</option>
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="hamster">Hamster</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="spider">Spider</option>
-                            <option value="goldfish">Goldfish</option>
+                            <option value="dog">Ariana</option>
+                            <option value="cat">Ben Arouss</option>
+                            <option value="hamster">El Mourouj</option>
+                            <option value="parrot">Tunis</option>
+                            <option value="spider">Nabeul</option>
+                            <option value="goldfish">Bizert</option>
                         </select>
                     </div>
                       <div class="form-group">
-                          <input type="password" class="form-control" placeholder="Password*">
+                          <input type="password" class="form-control" [(ngModel)]="nouvparieur.password" placeholder="Password" name="password" required >
                       </div>
                   </div>
                   <div class="footer">
@@ -268,7 +268,7 @@
               <div class="testmonial">                        
                   <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
                   <div class="media">
-                      <img class="mr-3" src="assets/imgs/avatar1.jpg" width="60" alt="Generic placeholder image">
+                      <img class="mr-3" src="./src/assets/images/avatar1.jpg" width="60" alt="Generic placeholder image">
                       <div class="media-body">
                           <h6 class="title">Emma Re</h6>
                           <p class="text-muted">Web Designer</p>
@@ -292,7 +292,7 @@
               <div class="testmonial">                        
                   <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
                   <div class="media">
-                      <img class="mr-3" src="assets/imgs/avatar3.jpg" width="60" alt="Generic placeholder image">
+                      <img class="mr-3" src="./src/assets/images/avatar3.jpg" width="60" alt="Generic placeholder image">
                       <div class="media-body">
                           <h6 class="title">Emily Roe</h6>
                           <p class="text-muted">Graphic Designer</p>
