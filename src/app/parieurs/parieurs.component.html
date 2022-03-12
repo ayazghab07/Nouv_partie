@@ -17,10 +17,37 @@
       <div class="row h-100 align-items-center">
           <div class="col-md-7">
               <div class="header-content">
-                  <h3 class="header-title"><strong class="text-primary">RU</strong><span>BIC</span></h3>
-                  <h4 class="header-subtitle">Creative Mylti-purpose Bootstrap theme </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolores voluptatem voluptatum adipisci vel, beatae unde! Mollitia voluptatum, ullam quisquam optio!</p>
-                  <button class="btn btn-outline-light btn-flat">Download</button>
+                  <h3 class="header-title"><strong class="text-primary">PARIEURS Liste</strong><span></span></h3>
+                  <div *ngIf="parieur" class="col-sm-3">
+                    <table class="table table-bordered table-striped">
+                      <thead>
+                        <tr class="info">
+                          <th><span class="text-light">Nom</span></th>
+                          <th><span class="text-light">Prénom</span></th>
+                          <th><span class="text-light">Email</span></th>
+                          <th><span class="text-light">Ville</span></th>
+                          <th><span class="text-light">Code Postal </span></th>
+                          <th><span class="text-light">Sexe</span></th>
+                          <th><span class="text-light">Télephone</span></th>
+                          <th><span class="text-light">Mettre à jour</span></th>
+                          <th><span class="text-light">Supprimer</span></th>
+                        </tr>
+                      </thead>
+                      <tbody id="myTable">
+                        <tr *ngFor="let par of parieur">
+                          <td><span class="text-light">{{par.nom}}</span></td>
+                          <td><span class="text-light">{{par.prenom}}</span></td>
+                          <td><span class="text-light">{{par.email}}</span></td>
+                          <td><span class="text-light">{{par.ville}}</span></td>
+                          <td><span class="text-light">{{par.codepostale}}</span></td>
+                          <td><span class="text-light">{{par.sexe}}</span></td>
+                          <td><span class="text-light">{{par.tel}}</span></td>
+                          <td><button type="button" class="btn btn-success"  (click)="Updatepar(par.id)">Modifier</button></td>
+                          <td><button type="button" class="btn btn-danger" (click)="clickMethod(par.id, par.nom)">Supprimer</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
               </div>  
           </div>
            

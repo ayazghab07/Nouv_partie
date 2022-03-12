@@ -17,11 +17,11 @@ export class ParieursComponent implements OnInit {
   
 
 
-  constructor(private serviceEmp: ParieurserService,
+  constructor(private servicepar: ParieurserService,
     private route:Router) { }
 
   ngOnInit(): void {
-    this.serviceEmp.getAllParieur().subscribe(data=>{
+    this.servicepar.getAllParieur().subscribe(data=>{
       this.parieur=data;
   } 
   
@@ -34,15 +34,15 @@ export class ParieursComponent implements OnInit {
   annulerajout(){
     this.ajout=false;
   }
- 
+  
 
  Updateparieur(id: number){
   this.route.navigate(['update_parieur',id]) ;
 
  }
- clickMethod(id, name) {
-  if(confirm("Are you sure to delete "+name)) {
-    this.serviceEmp.deleteParieur(id).subscribe(data=>{
+ clickMethod(id, nom) {
+  if(confirm("Are you sure to delete "+nom)) {
+    this.servicepar.deleteParieur(id).subscribe(data=>{
       console.log(data);
       
       this.ngOnInit();

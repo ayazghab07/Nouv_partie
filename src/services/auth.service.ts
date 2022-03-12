@@ -1,16 +1,13 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
-import { Admin } from 'src/model/admin';
-import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Parieur } from 'src/model/parieur';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AdminServiceService {
-
-  admin:Admin[];
+export class AuthService {
+  parrieur: Parieur[];
   verif:Boolean;
 public loggedUser:any;
 public isloggedIn: boolean = false;
@@ -19,9 +16,9 @@ public isloggedIn: boolean = false;
  
   
   constructor(private httpclient:HttpClient,private router:Router) { 
-      this.httpclient.get("http://localhost:8092/spring/api/admin").subscribe(
+      this.httpclient.get("http://localhost:8092/spring/api/par").subscribe(
   resp=>{
-    this.admin=Object.values(resp);
+    this.parrieur=Object.values(resp);
    
   }
   )
@@ -34,10 +31,10 @@ public isloggedIn: boolean = false;
     this.router.navigate(['/login']);
     }
     
-    SignIn(user :Admin):Boolean{
+    SignIn(user :Parieur):Boolean{
       let validUser: Boolean = false;
-      this.admin.forEach((curUser) => {
-      if(user.email===curUser.email && user.password==curUser.password) {
+      this.parrieur.forEach((curUser) => {
+      if(user.email=== curUser.email && user.password==curUser.password) {
       validUser = true;
       this.loggedUser = curUser.email;
       this.loggedUser = curUser.password;
@@ -49,5 +46,4 @@ public isloggedIn: boolean = false;
       });
       return validUser;
       }
-      
 }

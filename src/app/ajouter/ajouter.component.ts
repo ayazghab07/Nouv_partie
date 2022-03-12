@@ -28,7 +28,7 @@ export class AjouterComponent implements OnInit {
     // document.write("l admin est ajouté"); 
     
     window.alert("Parieur est ajouté !");
- this.router.navigate(['parieurs']);
+ this.router.navigate(['acceuil']);
     isAdded:true;
  
         

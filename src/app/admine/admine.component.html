@@ -24,20 +24,20 @@
               </div>  
           </div>
           <div class="col-md-5 d-none d-md-block">
-              <form class="header-form" (ngSubmit)='onSubmit(f)' #f="ngForm">
+              <form class="header-form" (ngSubmit)='onSubmit(f)' #f="ngForm" ngNativeValidate>
                   <div class="head">Pour <span class="text-primary">Admin</span></div>
                   <div class="body">
                     <div class="form-group">
-                        <input type="text" class="form-control"  [(ngModel)]="nouvadmin.nom" placeholder="Nom" name="nom" required >
+                        <input type="text" class="form-control"  [(ngModel)]="admin.nom" placeholder="Nom" name="nom" required >
                     </div>
                       <div class="form-group">
-                          <input type="text" class="form-control" [(ngModel)]="nouvadmin.prenom" placeholder="Prenom" name="prenom" required>
+                          <input type="text" class="form-control" [(ngModel)]="admin.prenom" placeholder="Prenom" name="prenom" required>
                       </div>
                       <div class="form-group">
-                          <input type="email" class="form-control" [(ngModel)]="nouvadmin.email" placeholder="Email" name="email" required>
+                          <input type="email" class="form-control" [(ngModel)]="admin.email" placeholder="Email" name="email" required>
                       </div>
                       <div class="form-group">
-                          <input type="password" class="form-control" [(ngModel)]="nouvadmin.prenom" placeholder="Mot de passe" name="password" required>
+                          <input type="password" class="form-control" [(ngModel)]="admin.password" placeholder="Mot de passe" name="password" required>
                       </div>
                   </div>
                   <div class="footer">
