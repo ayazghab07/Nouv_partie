@@ -29,18 +29,19 @@ export class ParieurserService {
     return this.http.get("http://localhost:8092/spring/api/par");
 
   }
-  deleteParieur(id:any):Observable<any>
-  {
-    let url='http://localhost:8092/spring/api/deletepar';
-    let baseurl=url.concat(id.toString());
-    return this.http.delete(baseurl);
+  public onDelete(id): Observable<any> {
+    console.log(id);
+    return this.http.delete<Parieur>("http://127.0.0.1:8092/spring/api/deletepar/"+id);
+    
   }
+ 
+ public (iUpdateparieurd: number): Observable<Parieur> {
   
-updateParieur(p:Parieur)
-{
-// console.log(p);
-this.deleteParieur(p);
-this.addParieur(p);
+  return this.http.get<Parieur>("http://127.0.0.1:8092/spring/api/deletepar/"+id);
+}
+public Updateparieur2(id: number, parieur: Parieur): Observable<Parieur> {
+  
+  return this.http.put<Parieur>("http://127.0.0.1:8092/par/"+id, parieur);
 }
 
 }

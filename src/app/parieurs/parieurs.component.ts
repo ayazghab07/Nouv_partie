@@ -42,7 +42,7 @@ export class ParieursComponent implements OnInit {
  }
  clickMethod(id, nom) {
   if(confirm("Are you sure to delete "+nom)) {
-    this.servicepar.deleteParieur(id).subscribe(data=>{
+    this.servicepar.onDelete(id).subscribe(data=>{
       console.log(data);
       
       this.ngOnInit();

@@ -11,6 +11,7 @@ import { AjouterComponent } from './ajouter/ajouter.component';
 import { AdmineComponent } from './admine/admine.component';
 import { ParieursComponent } from './parieurs/parieurs.component';
 import { AccuielComponent } from './accueil/accuiel.component';
+import { ModifierParComponent } from './modifier-par/modifier-par.component';
 
 
 
@@ -23,7 +24,8 @@ import { AccuielComponent } from './accueil/accuiel.component';
     AjouterComponent,
     AdmineComponent,
     ParieursComponent,
-    AccuielComponent
+    AccuielComponent,
+    ModifierParComponent
   ],
   imports: [
     BrowserModule,
