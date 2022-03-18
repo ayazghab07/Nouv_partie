@@ -18,30 +18,31 @@ export class ParieurserService {
     //console.warn(JSON.stringify(newAdmin));
     const headers = { 'content-type': 'application/json'}  
     const body=JSON.stringify(newParieur);
-    return  this.http.post<any>('http://127.0.0.1:8092/spring/api/addparieur',body,{'headers':headers}).subscribe(data => {
+    return  this.http.post<any>('http://127.0.0.1:8092/spring/api/add-parieur',body,{'headers':headers}).subscribe(data => {
      data.id;
      
  });
  
  
   }
+
   getAllParieur():Observable<any>{
-    return this.http.get("http://localhost:8092/spring/api/par");
+    return this.http.get("http://localhost:8092/spring/api/parieurs");
 
   }
   public onDelete(id): Observable<any> {
     console.log(id);
-    return this.http.delete<Parieur>("http://127.0.0.1:8092/spring/api/deletepar/"+id);
+    return this.http.delete<Parieur>("http://127.0.0.1:8092/spring/api/supprim-parieur/"+id);
     
   }
  
- public (iUpdateparieurd: number): Observable<Parieur> {
+  public Updateparieur(id: number): Observable<Parieur> {
   
-  return this.http.get<Parieur>("http://127.0.0.1:8092/spring/api/deletepar/"+id);
-}
-public Updateparieur2(id: number, parieur: Parieur): Observable<Parieur> {
+    return this.http.get<Parieur>("http://127.0.0.1:8092/spring/api/parieur/"+id);
+  }
+  public Updatepar2(id: number, parieur: Parieur): Observable<Parieur> {
+    
+    return this.http.put<Parieur>("http://127.0.0.1:8092/spring/api/parieur/"+id, parieur);
+  }
   
-  return this.http.put<Parieur>("http://127.0.0.1:8092/par/"+id, parieur);
-}
-
 }
