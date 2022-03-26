@@ -6,6 +6,7 @@ import { AdmineComponent } from './admine/admine.component';
 import { ParieursComponent } from './parieurs/parieurs.component';
 import { AccuielComponent } from './accueil/accuiel.component';
 import { ModifierParieurComponent } from './modifier-parieur/modifier-parieur.component';
+import { SportsComponent } from './sports/sports.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'s_admine', component:AdmineComponent},
   {path:'parieurs', component:ParieursComponent},
   {path:'acceuil', component:AccuielComponent },
-  {path:'update_parieur/:id', component:ModifierParieurComponent }
+  {path:'update_parieur/:id', component:ModifierParieurComponent },
+  {path:'s_sport', component:SportsComponent },
   
   
   

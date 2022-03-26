@@ -12,6 +12,7 @@ import { AdmineComponent } from './admine/admine.component';
 import { ParieursComponent } from './parieurs/parieurs.component';
 import { AccuielComponent } from './accueil/accuiel.component';
 import { ModifierParieurComponent } from './modifier-parieur/modifier-parieur.component';
+import { SportsComponent } from './sports/sports.component';
 
 
 
@@ -26,7 +27,8 @@ import { ModifierParieurComponent } from './modifier-parieur/modifier-parieur.co
     AdmineComponent,
     ParieursComponent,
     AccuielComponent,
-    ModifierParieurComponent
+    ModifierParieurComponent,
+    SportsComponent
    
   ],
   imports: [
